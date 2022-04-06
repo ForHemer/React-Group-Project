@@ -2,7 +2,7 @@ const GETROCKET = 'rockets/rockets/GET_ROCKET';
 const RESERVEROCKET = 'rockets/rockets/RESERVE_ROCKET';
 const CANCELROCKET = 'rockets/rockets/CANCEL_ROCKET';
 
-export const rocketsData = (payload) => ({
+export const getRockets = (payload) => ({
   type: GETROCKET,
   payload,
 });
@@ -12,7 +12,7 @@ export const reserveRocket = (id) => ({
   id,
 });
 
-export const removeReservation = (id) => ({
+export const cancelRocket = (id) => ({
   type: CANCELROCKET,
   id,
 });
@@ -40,4 +40,22 @@ export const rocketReducer = (state = startingState, action) => {
     default:
       return state;
   }
+};
+
+const api = 'https://api.spacexdata.com/v3/rockets';
+
+export const rocketAPICall = async () => {
+  const response = await fetch(api);
+  const data = await response.json();
+  const rockets = [];
+  data.forEach((rocket) => {
+    rockets.push({
+      id: rocket.id,
+      name: rocket.rocket_name,
+      image: rocket.flickr_images[0],
+      description: rocket.description,
+      reserved: false,
+    });
+  });
+  return rockets;
 };
