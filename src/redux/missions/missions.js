@@ -39,3 +39,20 @@ export const fetchMissionsFromApi = () => async (dispatch) => {
   dispatch(getMissions(missionsToDispatch));
 };
 
+// Reducers
+
+const reducer = (state = [], action) => {
+  switch (action.type) {
+    case JOIN_MISSION:
+      return [...state, action.payload];
+    case LEAVE_MISSION:
+      return state.filter((mission) => mission.id !== action.payload);
+    case GET_MISSIONS:
+      return [...action.payload];
+    default:
+      return state;
+  }
+};
+
+export default reducer;
+
