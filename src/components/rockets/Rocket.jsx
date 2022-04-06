@@ -9,7 +9,7 @@ const Rocket = ({
       <h2 className="rocket-name">{name}</h2>
       <p className="rocket-description">{description}</p>
       <button className="rocket-btn" type="button">Reserve Rocket</button>
-      <button className="rocket-btn" type="button">Cancel reservation</button>
+      <button className="cancel-rocket" type="button">Cancel reservation</button>
     </div>
   </div>
 );
