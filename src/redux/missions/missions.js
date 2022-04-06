@@ -22,6 +22,20 @@ export const leaveMission = (payload) => (
 export const getMissions = (payload) => ({
   type: GET_MISSIONS,
   payload,
-
 });
+
+// Fetch Missions
+
+export const fetchMissionsFromApi = () => async (dispatch) => {
+  const response = await fetch(baseURL);
+  const missions = await response.json();
+
+  const missionsToDispatch = missions.map((mission) => ({
+    mission_id: mission.mission_id,
+    mission_name: mission.mission_name,
+    mission_description: mission.description,
+  }));
+
+  dispatch(getMissions(missionsToDispatch));
+};
 
