@@ -1,20 +1,22 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Rocket from './Rocket';
-import { rocketAPICall, rocketReducer } from '../../redux/rockets/rockets';
+import { getRockets, rocketAPICall } from '../../redux/rockets/rockets';
 
-let initialLoad = false;
-
-const List = () => {
+const RocketList = () => {
   const dispatch = useDispatch();
   const rocketStorage = useSelector((state) => state.rocketReducer);
 
   useEffect(() => {
-    if (!initialLoad) {
-      dispatch(rocketAPICall());
-      initialLoad = true;
+    async function getRocketData() {
+      if (rocketStorage.length === 0) {
+        const fetch = await rocketAPICall();
+        dispatch(getRockets(fetch));
+      }
     }
-  }, [dispatch]);
+    getRocketData();
+  }, []);
+
   return (
     <div>
       {rocketStorage.map((rocket) => (
@@ -30,3 +32,11 @@ const List = () => {
     </div>
   );
 };
+
+const DisplayedRockets = () => (
+  <section>
+    <RocketList />
+  </section>
+);
+
+export default DisplayedRockets;
