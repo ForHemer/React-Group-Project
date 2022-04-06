@@ -41,7 +41,7 @@ export const fetchMissionsFromApi = () => async (dispatch) => {
 
 // Reducers
 
-const reducer = (state = [], action) => {
+const missionsReducer = (state = [], action) => {
   switch (action.type) {
     case JOIN_MISSION:
       return [...state, action.payload];
@@ -54,5 +54,5 @@ const reducer = (state = [], action) => {
   }
 };
 
-export default reducer;
+export default missionsReducer;
 
