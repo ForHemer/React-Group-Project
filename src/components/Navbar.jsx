@@ -28,7 +28,7 @@ const Navbar = () => (
         <li>
           <NavLink
             to="myprofile"
-            className="my-profile-nav"
+            className="my-profile"
           >
             My Profile
           </NavLink>

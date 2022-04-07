@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+}
+
+.my-profile {
+  border-left: 1px solid #000;
+  padding-left: 25px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(15, 153, 207);
+  transition: 0.5s;
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgb(4, 0, 238);
+}
+
+.rocket-card {
+  margin: 0 25px 25px 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.rocket-img {
+  width: 250px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rocket-description {
+  margin-top: 15px;
+}
+
+.rocket-btn,
+.cancel-rocket {
+  width: 200px;
+  height: 30px;
+  background-color: #09abf7;
+  border-radius: 8px;
+  border: none;
+  transition: 0.5s;
+  transform: scale(1);
+  color: #fff;
+}
+
+.rocket-btn:hover {
+  background-color: rgb(4, 0, 238);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cancel-rocket:hover {
+  background-color: rgb(4, 0, 238);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.reserved-badge {
+  background-color: rgb(1, 140, 165);
+  padding: 5px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+}

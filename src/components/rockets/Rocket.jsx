@@ -23,9 +23,9 @@ const Rocket = ({
           <p className="rocket-description">{description}</p>
         </div>
         {reserved ? (
-          <button className="rocket-btn" type="button" onClick={reserve}>Reserve Rocket</button>
-        ) : (
           <button className="cancel-rocket" type="button" onClick={cancel}>Cancel reservation</button>
+        ) : (
+          <button className="rocket-btn" type="button" onClick={reserve}>Reserve Rocket</button>
         )}
       </div>
     </div>
