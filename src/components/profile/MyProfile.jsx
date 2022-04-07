@@ -1,12 +1,8 @@
-import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
-  const [reservedRockets, displayRockets] = useState([]);
-  const rockets = useSelector((state) => state.rockets);
-  useEffect(() => {
-    displayRockets(rockets.filter((rocket) => rocket.reserved === true));
-  });
+// eslint-disable-next-line max-len
+  const rockets = useSelector((state) => (state.rocketReducer || []).filter((rocket) => rocket.reserved === true));
 
   return (
     <section>
@@ -15,7 +11,7 @@ const Profile = () => {
           My Rockets
         </h2>
         <ul className="rocket-list">
-          {reservedRockets.map((rocket) => <li className="rocket-item" key={rocket.id}>{rocket.name}</li>)}
+          {rockets.map((rocket) => (<li className="rocket-item" key={rocket.id}>{rocket.name}</li>))}
         </ul>
       </div>
     </section>
