@@ -1,5 +1,10 @@
+import React from 'react';
+import MissionsList from './MissionsList';
+
 const Missions = () => (
-  <div>Missions</div>
+  <div>
+    <MissionsList />
+  </div>
 );
 
 export default Missions;
