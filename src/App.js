@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Missions from './components/missions/Missions';
-import Profile from './components/MyProfile';
 import DisplayRockets from './components/rockets/RocketPage';
 import './App.css';
+import ProfilePage from './components/profile/ProfilePage';
 
 const App = () => (
   <BrowserRouter>
@@ -11,7 +11,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<DisplayRockets />} />
       <Route path="/missions" element={<Missions />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/profile" element={<ProfilePage />} />
     </Routes>
   </BrowserRouter>
 );
