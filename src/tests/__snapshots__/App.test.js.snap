@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Rendering Navbar rendering check 1`] = `
+<header>
+  <nav>
+    <div
+      className="header-container"
+    >
+      <img
+        alt="logo"
+        className="logo"
+        src="planet.png"
+      />
+      <h1
+        className="header-title"
+      >
+        Space Travelers' Hub
+      </h1>
+    </div>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="rockets-page active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          className="my-profile"
+          href="/myprofile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`Testing Rendering Profile rendering check 1`] = `
+<section>
+  <div
+    className="my-rockets"
+  >
+    <h2
+      className="rocket-title"
+    >
+      My Rockets
+    </h2>
+    <ul
+      className="rocket-list"
+    />
+  </div>
+</section>
+`;
+
+exports[`Testing Rendering Render Navbar 1`] = `
+<header>
+  <nav>
+    <div
+      className="header-container"
+    >
+      <img
+        alt="logo"
+        className="logo"
+        src="planet.png"
+      />
+      <h1
+        className="header-title"
+      >
+        Space Travelers' Hub
+      </h1>
+    </div>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="rockets-page active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          className="my-profile"
+          href="/myprofile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`Testing Rendering Render Profile section 1`] = `
+<section>
+  <div
+    className="my-rockets"
+  >
+    <h2
+      className="rocket-title"
+    >
+      My Rockets
+    </h2>
+    <ul
+      className="rocket-list"
+    />
+  </div>
+</section>
+`;
+
+exports[`Testing Rendering Render Rockets section 1`] = `
+<section>
+  <div />
+</section>
+`;
+
+exports[`Testing Rendering Rockets rendering check 1`] = `
+<section>
+  <div />
+</section>
+`;
