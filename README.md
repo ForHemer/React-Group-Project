@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-> To work on this project and see it live please run npm install and npm start, after that feel free to code away!
+> To work on this project and see it live please click on the green button with the word "Code" and either use your Desktop Github or copy the URL and use git clone in your local terminal run npm install and npm start, after that feel free to code away!
 
 ## Authors
 
