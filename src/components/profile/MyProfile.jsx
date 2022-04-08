@@ -11,15 +11,6 @@ const Profile = () => {
   const profileMission = missionList.filter((mission) => mission.reserved === true);
   return (
     <section className={style.flex}>
-      <div className="my-rockets">
-        <h2 className="rocket-title">
-          My Rockets
-        </h2>
-        <ul className="rocket-list">
-          {rockets.map((rocket) => (<li className="rocket-item" key={rocket.id}>{rocket.name}</li>))}
-        </ul>
-      </div>
-
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -43,6 +34,14 @@ const Profile = () => {
           )}
         </tbody>
       </Table>
+      <div className="my-rockets">
+        <h2 className="rocket-title">
+          My Rockets
+        </h2>
+        <ul className="rocket-list">
+          {rockets.map((rocket) => (<li className="rocket-item" key={rocket.id}>{rocket.name}</li>))}
+        </ul>
+      </div>
     </section>
   );
 };
