@@ -27,7 +27,7 @@ export const leaveMission = (id) => (
 export const getMissions = (payload) => ({
   type: GET_MISSIONS,
   payload,
-  
+
 });
 
 // Fetch Missions
