@@ -1,7 +1,7 @@
 import DisplayedRockets from './List';
 
 const DisplayRockets = () => (
-  <section>
+  <section className="rockets-page">
     <DisplayedRockets />
   </section>
 );

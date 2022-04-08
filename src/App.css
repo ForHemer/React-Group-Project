@@ -1,8 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  font-size: medium;
 }
 
 nav {
@@ -45,6 +44,11 @@ a {
 a:hover {
   cursor: pointer;
   color: rgb(4, 0, 238);
+}
+
+.rockets-page {
+  margin: 25px;
+  padding-bottom: 50px;
 }
 
 .rocket-card {
