@@ -17,7 +17,7 @@ export const cancelRocket = (id) => ({
   id,
 });
 
-const startingState = [];
+const startingState = null;
 
 export const rocketReducer = (state = startingState, action) => {
   switch (action.type) {

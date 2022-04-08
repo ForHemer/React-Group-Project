@@ -9,7 +9,7 @@ const RocketList = () => {
 
   useEffect(() => {
     async function getRocketData() {
-      if (rocketStorage.length === 0) {
+      if (rocketStorage === null) {
         const fetch = await rocketAPICall();
         dispatch(getRockets(fetch));
       }
@@ -19,7 +19,7 @@ const RocketList = () => {
 
   return (
     <div>
-      {rocketStorage.map((rocket) => (
+      {(rocketStorage || []).map((rocket) => (
         <Rocket
           name={rocket.name}
           image={rocket.image}

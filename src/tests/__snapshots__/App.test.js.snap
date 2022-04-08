@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Testing Rendering Missions rendering check 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        Missions
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
+
 exports[`Testing Rendering Navbar rendering check 1`] = `
 <header>
   <nav>
@@ -52,75 +73,31 @@ exports[`Testing Rendering Navbar rendering check 1`] = `
 `;
 
 exports[`Testing Rendering Profile rendering check 1`] = `
-<section>
-  <div
-    className="my-rockets"
+<section
+  className="flex"
+>
+  <table
+    className="table table-striped table-bordered table-hover"
   >
-    <h2
-      className="rocket-title"
-    >
-      My Rockets
-    </h2>
-    <ul
-      className="rocket-list"
-    />
-  </div>
-</section>
-`;
-
-exports[`Testing Rendering Render Navbar 1`] = `
-<header>
-  <nav>
-    <div
-      className="header-container"
-    >
-      <img
-        alt="logo"
-        className="logo"
-        src="planet.png"
-      />
-      <h1
-        className="header-title"
+    <thead>
+      <tr>
+        <th
+          colSpan={2}
+        >
+          My Missions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="empty"
       >
-        Space Travelers' Hub
-      </h1>
-    </div>
-    <ul>
-      <li>
-        <a
-          aria-current="page"
-          className="rockets-page active"
-          href="/"
-          onClick={[Function]}
-        >
-          Rockets
-        </a>
-      </li>
-      <li>
-        <a
-          className=""
-          href="/missions"
-          onClick={[Function]}
-        >
-          Missions
-        </a>
-      </li>
-      <li>
-        <a
-          className="my-profile"
-          href="/myprofile"
-          onClick={[Function]}
-        >
-          My Profile
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-`;
-
-exports[`Testing Rendering Render Profile section 1`] = `
-<section>
+        <td>
+          You have not joined any missions
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <div
     className="my-rockets"
   >
@@ -133,12 +110,6 @@ exports[`Testing Rendering Render Profile section 1`] = `
       className="rocket-list"
     />
   </div>
-</section>
-`;
-
-exports[`Testing Rendering Render Rockets section 1`] = `
-<section>
-  <div />
 </section>
 `;
 

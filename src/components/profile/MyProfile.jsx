@@ -5,8 +5,8 @@ import ProfileMissions from '../missions/ProfileMissions';
 import style from './Profile.module.css';
 
 const Profile = () => {
-// eslint-disable-next-line max-len
-  const rockets = useSelector((state) => (state.rocketReducer || []).filter((rocket) => rocket.reserved === true));
+  const rockets = useSelector((state) => (state.rocketReducer || [])
+    .filter((rocket) => rocket.reserved === true));
   const missionList = useSelector((state) => state.missionsReducer);
   const profileMission = missionList.filter((mission) => mission.reserved === true);
   return (
