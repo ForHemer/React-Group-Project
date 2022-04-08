@@ -1,10 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MissionsItem from './MissionsItem';
 
 const MissionsList = () => {
-  const missions = useSelector((state) => state.missions);
+  const missions = useSelector((state) => state.missionsReducer);
   return (
     <Table striped bordered hover>
       <thead>
